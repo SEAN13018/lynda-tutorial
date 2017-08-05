@@ -1,7 +1,6 @@
 /* This is the main stylesheet for the website */
 
 /* Font for the header */
-
 /* font not working on firefoxs */ 
 
 @font-face {
@@ -12,8 +11,11 @@
 /* Styling for the main website layout*/
 /* Applicable to all pages*/
 body {
+	border-style: solid;
+    border-width: 1px;
+	border-color: #000000;
 	margin: auto;
-	width:90%;
+	width:72.5%;
 	background-color: #e6e6e6;
 }
 
@@ -24,6 +26,7 @@ body {
 	overflow: hidden;
 }
 
+/* Eventually make the navigation icons and close link change size when the mouse is hovered on it. */ 
 #icon {
 	float: left;
 	overflow: hidden; 
@@ -85,9 +88,8 @@ footer {
 	font-size: 100%;
 }
 
-#shield{
+#shield {
 	width: 100%;
-	height:auto;
 }
 
 .a {
@@ -96,12 +98,8 @@ footer {
 }
 
 .b {
-	gird-column: 2;
+	grid-column: 2;
 	grid-row: 1;
-}
-
-img, .b {
-	height: 10em;
 }
 
 .c {
@@ -115,7 +113,60 @@ img, .b {
 }
 
 /* Styling for navigation */
+a, .close{
+	text-decoration: none;
+	color: black;
+	font-family:'quicksand-bold';
+}
 
-.box w, .box x, .box y, .box z {
-	display: block;
+.close {
+	text-align: center;
+	width: 100%;
+	background-color: #fbae17;
+	font-size: 1.6em;
+	padding-top: 0.2em;
+	padding-bottom: 0.2em;
+}
+
+#display{
+	width: 100%;
+}
+
+.active {
+	width: 100%;
+	display: grid;
+	grid-gap: 10em;
+		grid-template-columns: 2;
+		grid-template-rows: 2;
+	height:100%;
+	position: relative;
+	background-color: #FFFFFF;
+}
+
+.inactive {
+	display: none;
+}
+
+.w{
+	grid-column:1;
+	grid-row: 1;
+	width: 48%;
+}
+
+.x{
+	grid-column:2;
+	grid-row: 1;
+}
+.y{
+	grid-column:1;
+	grid-row: 2;
+}
+
+.z{
+	grid-column:2;
+	grid-row: 2;
+}
+
+figcaption {
+	text-align: center;
 }

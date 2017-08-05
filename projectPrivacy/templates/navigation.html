@@ -2,20 +2,39 @@
 
 {% block content %}
 <!-- From email, thing that changes class visiblity depending on circumstance.  -->
-		<div class="navigationTrue">
-			<div class="box w">
-				<a href="index.html"><img src="../home.svg" alt="Index Page"></a>
-			</div>
-			<div class="box x">
-				<a href="messaging.html"><img src="../messaging.svg" alt="Messaging Page"></a>
-			</div>
-			<div class="box y">
-				<a href="help.html"><img src="../help.svg" alt="Help Page"></a>
-			</div>
-			<div class="box z">
-				<img src="../logout.svg" alt=" Page">
-				<!-- How to use an image as a button below -->
-				<!-- <input type="image" src="logg.png" name="saveForm" class="btTxt submit" id="saveForm" /> -->
-			</div>
+		<div class="close">
+			<a href="/">Close</a>
 		</div>
+			<div id="display">
+				<div class="{% if x == True %}active{% else %}inactive{%endif %}">
+					<div class="active w">
+						<a href="/"><img src="../static/img/home.svg" alt="Index Page"><figcaption>Home</figcaption></a>
+					</div>
+					<div class="active x">
+						<a href="/messaging"><img src="../static/img/messaging.svg" alt="Messaging Page"><figcaption>Messaging</figcaption></a>
+					</div>
+					<div class="active y">
+						<a href="/help"><img src="../static/img/info.svg" alt="Help Page"><figcaption>Help</figcaption></a>
+					</div>
+					<div class="active z">
+						<img src="../static/img/logout.svg" alt=" Page">
+						<figcaption>Logout</figcaption>
+						<!-- Turn it into a button that signs out the user. -->
+					</div>
+				</div>
+				<div class="{% if x == False %}active{% else %}inactive{%endif %}">
+					<div class="active w">
+						<a href="/"><img src="../static/img/home.svg" alt="Index Page"><figcaption>Home</figcaption></a>
+					</div>
+					<div class="active x">
+						<a href="/login"><img src="../static/img/login.svg" alt="Login Here" style="width: 48%;"><figcaption>Login</figcaption></a>
+					</div>
+					<div class="active y">
+						<a href="/help"><img src="../static/img/info.svg" alt="Help Page"><figcaption>Help</figcaption></a>
+					</div>
+					<div class="active z">
+						<!-- Empty box in the grid (a space filler.) -->
+					</div>
+				</div>
+			</div>
 {% endblock %}
