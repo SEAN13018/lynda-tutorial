@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<!-- From email, thing that changes class visiblity depending on circumstance.  -->
+		<div class="navigationTrue">
+			<div class="box w">
+				<a href="index.html"><img src="../home.svg" alt="Index Page"></a>
+			</div>
+			<div class="box x">
+				<a href="messaging.html"><img src="../messaging.svg" alt="Messaging Page"></a>
+			</div>
+			<div class="box y">
+				<a href="help.html"><img src="../help.svg" alt="Help Page"></a>
+			</div>
+			<div class="box z">
+				<img src="../logout.svg" alt=" Page">
+				<!-- How to use an image as a button below -->
+				<!-- <input type="image" src="logg.png" name="saveForm" class="btTxt submit" id="saveForm" /> -->
+			</div>
+		</div>
+{% endblock %}
